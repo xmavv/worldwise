@@ -1,10 +1,11 @@
-import AppNav from "../components/AppNav.tsx";
-
+import Sidebar from "../components/Sidebar.tsx";
+import Map from "../components/Map.tsx";
+import styles from "./AppLayout.module.css";
 function AppLayout() {
   return (
-    <div>
-      <AppNav />
-      <p>App</p>
+    <div className={styles.app}>
+      <Sidebar />
+      <Map />
     </div>
   );
 }
