@@ -2,8 +2,14 @@ import styles from "./CityList.module.css";
 import Spinner from "./Spinner.tsx";
 import CityItem from "./CityItem.tsx";
 import Message from "./Message.tsx";
+import CityInterface from "../Interfaces/CityInterface.tsx";
 
-function CityList({ cities, isLoading }) {
+interface Props {
+  cities: CityInterface[];
+  isLoading: boolean;
+}
+
+function CityList({ cities, isLoading }: Props) {
   if (isLoading) return <Spinner />;
   if (!cities.length)
     return (

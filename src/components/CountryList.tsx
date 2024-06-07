@@ -31,7 +31,7 @@ function CountryList({ cities, isLoading }: Props) {
   return (
     <ul className={styles.countryList}>
       {countries.map((country: CountryInterface) => (
-        <CountryItem country={country} />
+        <CountryItem country={country} key={country.country} />
       ))}
     </ul>
   );
