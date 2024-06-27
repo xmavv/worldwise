@@ -3,13 +3,16 @@ import Spinner from "./Spinner.tsx";
 import CityItem from "./CityItem.tsx";
 import Message from "./Message.tsx";
 import CityInterface from "../Interfaces/CityInterface.tsx";
+import { useCities } from "../contexts/CitiesContext.tsx";
 
 interface Props {
   cities: CityInterface[];
   isLoading: boolean;
 }
 
-function CityList({ cities, isLoading }: Props) {
+function CityList() {
+  const { cities, isLoading } = useCities() as Props;
+
   if (isLoading) return <Spinner />;
   if (!cities.length)
     return (
