@@ -15,18 +15,17 @@ import { Simulate } from "react-dom/test-utils";
 import click = Simulate.click;
 import { useGeolocation } from "../hooks/useGeolocation.tsx";
 import Button from "./Button.tsx";
+import { useUrlPosition } from "../hooks/useUrlPosition.tsx";
 function Map() {
   const [mapPosition, setMapPosition] = useState([40, 0]);
   const { cities } = useCities();
-  const [searchParams] = useSearchParams();
   const {
     isLoading: isLoadingPosition,
     position: geolocationPosition,
     getPosition,
   } = useGeolocation();
 
-  const mapLat = searchParams.get("lat");
-  const mapLng = searchParams.get("lng");
+  const [mapLat, mapLng] = useUrlPosition();
 
   useEffect(
     function () {
