@@ -41,4 +41,15 @@
 :global(.react-datepicker) {
   font-family: inherit;
   font-size: 1.2rem;
+}:global(.react-datepicker__week) {
+   padding: .7rem;
+ }
+
+:global(.react-datepicker__day) {
+  margin: 0 .7rem;
 }
+
+:global(.react-datepicker__day-name) {
+  margin: 0 .7rem;
+}
+

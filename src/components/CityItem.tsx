@@ -2,6 +2,7 @@ import styles from "./CityItem.module.css";
 import CityInterface from "../Interfaces/CityInterface.tsx";
 import { Link } from "react-router-dom";
 import { useCities } from "../contexts/CitiesContext.tsx";
+import logo from "./Logo.tsx";
 
 interface Props {
   city: CityInterface;
@@ -15,8 +16,14 @@ const formatDate = (date: string) =>
   }).format(new Date(date));
 
 function CityItem({ city }: Props) {
-  const { currentCity } = useCities();
+  const { currentCity, deleteCity } = useCities();
   const { cityName, emoji, date, id, position } = city;
+
+  function handleDelete(e) {
+    e.preventDefault();
+
+    deleteCity(id);
+  }
 
   return (
     <li>
@@ -27,7 +34,9 @@ function CityItem({ city }: Props) {
         <span className={styles.emoji}>{emoji}</span>
         <h3 className={styles.name}>{cityName}</h3>
         <time className={styles.date}>({formatDate(date)})</time>
-        <button className={styles.deleteBtn}>&times;</button>
+        <button onClick={handleDelete} className={styles.deleteBtn}>
+          &times;
+        </button>
       </Link>
     </li>
   );
