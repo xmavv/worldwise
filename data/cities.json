@@ -85,15 +85,15 @@
       }
     },
     {
-      "id": "918b",
-      "cityName": "Neya",
-      "country": "Russian Federation (the)",
-      "emoji": "🇷🇺",
-      "date": "2024-06-29T20:01:25.401Z",
-      "notes": "",
+      "id": "7d51",
+      "cityName": "Brzeg",
+      "country": "Poland",
+      "emoji": "🇵🇱",
+      "date": "2024-06-30T13:12:39.325Z",
+      "notes": "zajebiste miasto xd",
       "position": {
-        "lat": "58.08726195402222",
-        "lng": "43.6118625"
+        "lat": "50.85841014752971",
+        "lng": "17.465515136718754"
       }
     }
   ]

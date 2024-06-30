@@ -1,1 +1,2 @@
 gdy kliknie sie na swoja lokalizajce powinien form sie otwierac z ta nazwa itd raczej proste
+gdy klikamy to myszka wskazuje palcem a nie raczka
